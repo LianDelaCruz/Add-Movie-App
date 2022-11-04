@@ -2,17 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/index.css';
 import App from './App';
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NotFound from './pages/notFound/notFound';
+import Layout from './pages/layout/layout';
+import Profile from './pages/profile/profile';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Header/>
-    <App />
-    <Footer/>
-  </React.StrictMode>
+  <>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element = {<Layout/>}>
+          <Route path='/' element={<App/>}/>
+          <Route path='/profile' element={<Profile/>}/>
+          <Route path='*' element={<NotFound/>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </>
 ); 
 
 
