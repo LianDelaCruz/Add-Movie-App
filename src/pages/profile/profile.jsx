@@ -1,13 +1,14 @@
 //connect to index as route
+import { Fragment } from "react";
 import LogIn from "../../components/logIn/login";
 import SignUp from "../../components/signUp/signup";
 
-const Profile = () => {
+const Profile = (props) => {
 return (
-    <div>
+    <>
         <LogIn/>
         <SignUp/>
-    </div>
+    </>
 )
 }
 

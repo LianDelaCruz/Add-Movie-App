@@ -10,8 +10,10 @@ const App = () => {
     const navigateProfile = () =>{
         navigate("");
     }
+    //navlink the button to profile
     return(
-        <button>add movie</button>
+        
+        <button>add movie</button> 
     )
 }
 

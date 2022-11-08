@@ -8,7 +8,8 @@ const UserForm = (props) => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    props.showInConsole(userInput)
+
+    props.onSubmit && props.onSubmit(userInput)
   };
 
   return (
