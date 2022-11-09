@@ -1,2 +1,2 @@
-export const userKey = 'users';
+export const userKey = 'user';
 

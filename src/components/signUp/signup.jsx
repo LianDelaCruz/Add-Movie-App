@@ -8,26 +8,24 @@ class SignUp extends React.Component {
     super(props);
     this.state = {
       showModal: false,
-      list: [], //for adding users in an array
-      user: {
-        email: "",
-        password: "",
-      },
     };
   }
 
-  signUpUser = (user) => {
-    const signedUpUser = getUsers();
-    const emailIsTheSame = signedUpUser
-      ? user.email === signedUpUser.email
-      : false;
-    if (emailIsTheSame) {
-      this.setState({ showModal: true });
+  signUpUser = (newUser) => {
+    const storedUsers = getUsers();
+    const foundUser = storedUsers.find((storedUser) => {
+      const emailsMatch = newUser.email === storedUser.email
+      return emailsMatch
+    });
+    if (!foundUser) {
+      saveUser(newUser);
     } else {
-      console.log("it is a new user");
-      saveUser(user);
-      //connect to profile to show the add movie thingy
-      //google react router go to page
+      this.setState({ showModal: true });
+
+      
+
+      //TODO: connect to profile to show the add movie thingy
+      //TODO: google react router go to page
     }
   }; //this is a function that focus on saving items in the localstorage(helpers folder)
 

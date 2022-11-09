@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NotFound from './pages/notFound/notFound';
 import Layout from './pages/layout/layout';
 import Profile from './pages/profile/profile';
+import Movies from './pages/moviePage/movies';
 
 
 
@@ -18,6 +19,7 @@ root.render(
           <Route index element={<App/>}/>
           <Route path='/profile' element={<Profile/>}/>
           <Route path='*' element={<NotFound/>} />
+          <Route path='/movies' element={<Movies/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

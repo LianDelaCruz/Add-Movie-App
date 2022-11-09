@@ -1,14 +1,12 @@
 import { userKey } from "../constants/storageKeys";
 
 export const getUsers = () => {
-    const usersString = localStorage.getItem(userKey)
-    const users = JSON.parse(usersString)
+    const users = JSON.parse(localStorage.getItem(userKey))
     if(Array.isArray(users)) {
         return users;
     } else {
         return []
     }
-    
 }
 
 export const saveUser = (user) => {

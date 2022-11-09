@@ -1,7 +1,7 @@
 //make a form for log in and sign up
 
 const UserForm = (props) => {
-  const userInput = {
+  const user = {
     email: "",
     password: "",
   };
@@ -9,7 +9,7 @@ const UserForm = (props) => {
   const submitForm = (e) => {
     e.preventDefault();
 
-    props.onSubmit && props.onSubmit(userInput)
+    props.onSubmit && props.onSubmit(user)
   };
 
   return (
@@ -19,12 +19,12 @@ const UserForm = (props) => {
           required
           type="text"
           placeholder="write your e-mail"
-          onChange={(e) => (userInput.email = e.target.value)}
+          onChange={(e) => (user.email = e.target.value)}
         />
         <input
           type="password"
           placeholder="write password"
-          onChange={(e) => (userInput.password = e.target.value)}
+          onChange={(e) => (user.password = e.target.value)}
         />
         <input type="Submit" onClick={submitForm} />
       </form>

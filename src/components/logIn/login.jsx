@@ -11,16 +11,18 @@ const LogIn = (props) => {
   const logInUser = (user) => {
     const storedUsers = getUsers();
     const foundUser = storedUsers.find((storedUser) => {
-      return (
-        user.email === storedUser.email && user.password === foundUser.password
-      );
+      const emailsMatch = user.email === storedUser.email
+      const passMatch = user.password === storedUser.password
+      return emailsMatch && passMatch
     });
-    console.log(foundUser);
-    if (foundUser) {
-      //log in user here to render in profile
+    if(foundUser){
+      console.log('successfully logged in')
+       //log in user here to render in profile
+      //use nagivate here
     } else {
-      setShowModal(true);
+      setShowModal(true)
     }
+    
   };
 
   const hideLogInModal = () => {
@@ -30,11 +32,11 @@ const LogIn = (props) => {
 
   return (
     <div>
-      <h2>Log In:</h2>
+      log In:
       <UserForm onSubmit={logInUser} />
       <Modal
         handleClick={hideLogInModal}
-        message={"you must sign up first!"}
+        message={"user not found"}
         show={showModal}
       />
     </div>
