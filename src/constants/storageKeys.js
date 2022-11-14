@@ -1,2 +1,3 @@
-export const userKey = 'user';
+export const userKey = 'users';
+export const isAuthorized = 'isAuthorized'
 

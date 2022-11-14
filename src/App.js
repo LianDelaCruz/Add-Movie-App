@@ -1,20 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-//import movies
-//button for adding movie
+import { isAuthorized } from "./constants/storageKeys";
 
-const App = () => {
-
-    const navigate = useNavigate();
-
-    const navigateProfile = () =>{
-        navigate("");
+const App = (props) => {
+  const navigate = useNavigate();
+  const addMovie = (user) => {
+    //if user is logged in, then kör navigate.
+    if (localStorage.getItem(isAuthorized)) {
+      navigate("/addmovies");
+    } else {
+      navigate("/profile");
+      console.log("not connected to profile");
     }
-    //navlink the button to profile
-    return(
-        
-        <button>add movie</button> 
-    )
-}
+  };
+
+  return <button onClick={addMovie}>add movie</button>;
+};
 
 export default App;

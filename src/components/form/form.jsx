@@ -6,7 +6,7 @@ const UserForm = (props) => {
     password: "",
   };
 
-  const submitForm = (e) => {
+  const submitUserForm = (e) => {
     e.preventDefault();
 
     props.onSubmit && props.onSubmit(user)
@@ -14,7 +14,7 @@ const UserForm = (props) => {
 
   return (
     <div>
-      <form onSubmit={submitForm}>
+      <form onSubmit={submitUserForm}>
         <input
           required
           type="text"
@@ -26,7 +26,7 @@ const UserForm = (props) => {
           placeholder="write password"
           onChange={(e) => (user.password = e.target.value)}
         />
-        <input type="Submit" onClick={submitForm} />
+        <input type="Submit" onClick={submitUserForm} />
       </form>
     </div>
   );

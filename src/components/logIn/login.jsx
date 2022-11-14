@@ -1,12 +1,16 @@
 //connect form to log in
 //connect login to profile
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getUsers } from "../../helpers/localStorage";
 import UserForm from "../form/form";
 import Modal from "../modal/modal";
+import { isAuthorized } from "../../constants/storageKeys";
+
 
 const LogIn = (props) => {
   const [showModal, setShowModal] = useState(false);
+  //const navigate = useNavigate();
 
   const logInUser = (user) => {
     const storedUsers = getUsers();
@@ -16,6 +20,8 @@ const LogIn = (props) => {
       return emailsMatch && passMatch
     });
     if(foundUser){
+      localStorage.setItem(isAuthorized,true)
+      //navigate('/movies')
       console.log('successfully logged in')
        //log in user here to render in profile
       //use nagivate here
