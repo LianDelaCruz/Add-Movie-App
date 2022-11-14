@@ -21,11 +21,6 @@ class SignUp extends React.Component {
       saveUser(newUser);
     } else {
       this.setState({ showModal: true });
-
-      
-
-      //TODO: connect to profile to show the add movie thingy
-      //TODO: google react router go to page
     }
   }; //this is a function that focus on saving items in the localstorage(helpers folder)
 

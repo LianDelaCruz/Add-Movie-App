@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { getUsers } from "../../helpers/localStorage";
 import UserForm from "../form/form";
 import Modal from "../modal/modal";
-import { isAuthorized } from "../../constants/storageKeys";
+import { authorizedUser } from "../../constants/storageKeys";
+//import { saveLoggedInUser } from "../../helpers/localStorage";
 
 
 const LogIn = (props) => {
@@ -20,7 +21,7 @@ const LogIn = (props) => {
       return emailsMatch && passMatch
     });
     if(foundUser){
-      localStorage.setItem(isAuthorized,true)
+      localStorage.setItem(authorizedUser, foundUser.email)
       navigate('/')
       console.log('successfully logged in')
     } else {
@@ -30,7 +31,6 @@ const LogIn = (props) => {
   };
 
   const hideLogInModal = () => {
-    console.log("it works in log in!");
     setShowModal(false);
   };
 

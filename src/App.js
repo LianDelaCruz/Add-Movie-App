@@ -1,12 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { isAuthorized } from "./constants/storageKeys";
+import { authorizedUser } from "./constants/storageKeys";
+//import { getLoggedInUser } from "./helpers/localStorage";
 
 const App = (props) => {
   const navigate = useNavigate();
   const addMovie = (user) => {
-    //if user is logged in, then kör navigate.
-    if (localStorage.getItem(isAuthorized)) {
+   
+    if (localStorage.getItem(authorizedUser)) {
       navigate("/addmovies");
     } else {
       navigate("/profile");
