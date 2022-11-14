@@ -11,7 +11,7 @@ const RenderMovieForm = () => {
   const addMovie = (newMovie)=> {
     const storedMovies = getMovies();
     const foundMovie = storedMovies.find((storedMovies) => {
-      const moviesMatch = newMovie.title === storedMovies.title && newMovie.shortInfo === storedMovies.shortInfo && newMovie.longInfo === storedMovies.longInfo
+      const moviesMatch = newMovie.title === storedMovies.title 
       return moviesMatch
     });
     if(!foundMovie) {

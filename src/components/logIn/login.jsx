@@ -2,11 +2,9 @@
 //connect login to profile
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getUsers } from "../../helpers/localStorage";
+import { getUsers, saveLoggedInUser } from "../../helpers/localStorage";
 import UserForm from "../form/form";
 import Modal from "../modal/modal";
-import { authorizedUser } from "../../constants/storageKeys";
-//import { saveLoggedInUser } from "../../helpers/localStorage";
 
 
 const LogIn = (props) => {
@@ -21,7 +19,7 @@ const LogIn = (props) => {
       return emailsMatch && passMatch
     });
     if(foundUser){
-      localStorage.setItem(authorizedUser, foundUser.email)
+      saveLoggedInUser(foundUser.email)
       navigate('/')
       console.log('successfully logged in')
     } else {

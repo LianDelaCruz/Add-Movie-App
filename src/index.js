@@ -8,6 +8,7 @@ import Layout from "./pages/layout/layout";
 import Profile from "./pages/profile/profile";
 import Movies from "./pages/moviePage/movies";
 import AddMovie from "./pages/moviePage/addmovies";
+import MovieItem from "./pages/moviePage/movieItem";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,6 +21,7 @@ root.render(
           <Route path="/profile" element={<Profile />}/>
           <Route path="/addmovies" element={<AddMovie />} />
           <Route path="/movies" element={<Movies />} />
+          <Route path="/movies/movieitem" element={<MovieItem/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,6 +1,7 @@
 const MovieForm = (props) => {
   const movieInput = {
     title: "",
+    img: null,
     shortInfo: "",
     longInfo: "",
   };
@@ -17,13 +18,16 @@ const MovieForm = (props) => {
           placeholder="Write movie name"
           onChange={(e) => (movieInput.title = e.target.value)}
         />
-        {/* <input
-          type=" file"
+        <input
+          type="file"
+          accept="image/*"
           placeholder="upload image here"
           onChange={(event) => {
+            const imgUrl = URL.createObjectURL(event.target.files[0])
+            movieInput.img = imgUrl
             console.log(event.target.files[0]);
           }} 
-        />*/}
+        />
         <input
           type="text"
           placeholder="Short description"
