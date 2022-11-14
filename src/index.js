@@ -7,7 +7,7 @@ import NotFound from "./pages/notFound/notFound";
 import Layout from "./pages/layout/layout";
 import Profile from "./pages/profile/profile";
 import Movies from "./pages/moviePage/movies";
-import AddMovie from "./pages/moviePage/addmovie";
+import AddMovie from "./pages/moviePage/addmovies";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

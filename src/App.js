@@ -10,7 +10,7 @@ const App = (props) => {
       navigate("/addmovies");
     } else {
       navigate("/profile");
-      console.log("not connected to profile");
+      console.log("not yet connected to profile");
     }
   };
 

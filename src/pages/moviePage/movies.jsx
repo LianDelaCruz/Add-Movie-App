@@ -1,7 +1,13 @@
-//render list of movies
 const Movies = () => {
+  //const navigate = useNavigate();
 
-    return <div>MOVIE PAGE</div>
-}
+  console.log("submit button for add movie success!");
+
+  return (
+    <>
+      <div>MOVIE PAGE</div>
+    </>
+  );
+};
 
 export default Movies;

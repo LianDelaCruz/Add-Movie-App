@@ -1,6 +1,4 @@
-//add form
-
-const AddMovie = (props) => {
+const MovieForm = (props) => {
   const movieInput = {
     movieName: "",
     shortDescription: "",
@@ -9,8 +7,8 @@ const AddMovie = (props) => {
 
   const submitMovie = (e) => {
     e.preventDefault();
-    props.onSubmit && props.onSubmit(movieInput)
-    console.log('does add movie works?')
+    props.onSubmit && props.onSubmit(movieInput);
+    console.log("does add movie works?");
   };
   return (
     <div>
@@ -37,10 +35,10 @@ const AddMovie = (props) => {
           placeholder="Long description about the movie"
           onChange={(e) => (movieInput.longDescription = e.target.value)}
         />
-        <input type="submit" value="Submit" onClick={submitMovie}/>
+        <input type="submit" value="Submit" onClick={submitMovie} />
       </form>
     </div>
   );
 };
 
-export default AddMovie;
+export default MovieForm;

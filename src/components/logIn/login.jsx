@@ -10,7 +10,7 @@ import { isAuthorized } from "../../constants/storageKeys";
 
 const LogIn = (props) => {
   const [showModal, setShowModal] = useState(false);
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const logInUser = (user) => {
     const storedUsers = getUsers();
@@ -21,10 +21,8 @@ const LogIn = (props) => {
     });
     if(foundUser){
       localStorage.setItem(isAuthorized,true)
-      //navigate('/movies')
+      navigate('/')
       console.log('successfully logged in')
-       //log in user here to render in profile
-      //use nagivate here
     } else {
       setShowModal(true)
     }
