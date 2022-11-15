@@ -18,7 +18,6 @@ const RenderMovieForm = () => {
       saveMovie(newMovie, authorizedUser)
       navigate('/movies')
     }
-    
   }
   
   return (

@@ -21,7 +21,7 @@ root.render(
           <Route path="/profile" element={<Profile />}/>
           <Route path="/addmovies" element={<AddMovie />} />
           <Route path="/movies" element={<Movies />} />
-          <Route path="/movies/movieitem" element={<MovieItem/>}/>
+          <Route path="/movies/:movieitem" element={<MovieItem/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
