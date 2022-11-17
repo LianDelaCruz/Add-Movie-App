@@ -20,13 +20,18 @@ export const saveUser = (user) => {
 //Local Storage for array of MOVIES
 
 export const getMovies = () => {
-  
   const movies = JSON.parse(localStorage.getItem(movieKey));
   if (Array.isArray(movies)) {
     return movies;
   } else {
     return [];
   }
+};
+
+export const deleteMovie = (titleToDelete) => {
+  const movies = getMovies();
+  const nextMovies = movies.filter((movie) => movie.title !== titleToDelete);
+  localStorage.setItem(movieKey, JSON.stringify(nextMovies));
 };
 
 export const saveMovie = (movie) => {
@@ -48,8 +53,14 @@ export const getLoggedInUser = () => {
   return user;
 };
 
-export const saveLoggedInUser = (userEmail) => {
-    localStorage.setItem(authorizedUser, userEmail)   
-}
+export const setLoggedInUser = (userEmail) => {
+  localStorage.setItem(authorizedUser, userEmail);
+};
+
+//Log out function for logged in user
+
+export const logOut = () => {
+  setLoggedInUser(null)
+};
 
 //Made a seperate file for saving and getting items from local storage so that this can be reused should it need be.

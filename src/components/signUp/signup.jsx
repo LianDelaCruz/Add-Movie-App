@@ -22,7 +22,7 @@ class SignUp extends React.Component {
       saveUser(newUser);
       this.setState({ showModal: true , modalMessage: 'now you can log in!'});
     } else {
-      this.setState({ showModal: true, modalMessage: 'now you can log in!' });
+      this.setState({ showModal: true, modalMessage: 'Account already exist!' });
     }
   }; //this is a function that focus on saving items in the localstorage(helpers folder)
 

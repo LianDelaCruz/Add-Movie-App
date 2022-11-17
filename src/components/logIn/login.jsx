@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getUsers, saveLoggedInUser } from "../../helpers/localStorage";
+import { getUsers, setLoggedInUser } from "../../helpers/localStorage";
 import UserForm from "../form/form";
 import Modal from "../modal/modal";
 
@@ -16,7 +16,7 @@ const LogIn = (props) => {
       return emailsMatch && passMatch;
     });
     if (foundUser) {
-      saveLoggedInUser(foundUser.email);
+      setLoggedInUser(foundUser.email);
       navigate("/");
       console.log("successfully logged in");
     } else {

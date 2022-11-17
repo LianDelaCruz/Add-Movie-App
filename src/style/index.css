@@ -9,4 +9,5 @@
  @import '../pages/profile/_profile.css';
  @import '../components/logIn/_login.css';
  @import '../components/signUp/_signUp.css';
+ @import '../components/form/_movieForm.css';
  

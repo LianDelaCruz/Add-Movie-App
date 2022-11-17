@@ -4,8 +4,6 @@ const MovieItem = () => {
     const location = useLocation();
     console.log(location.state?.movieItem)
 
-    
-
     return(
         <div>
         <h1>{location.state?.movieItem.title}</h1>

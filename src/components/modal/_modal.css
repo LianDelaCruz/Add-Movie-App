@@ -1,6 +1,6 @@
 .modal {
     display: block;
-    position: fixed;
+    position: absolute;
     top: calc(50% - 9rem);
     width: 27rem;
     left: calc(50% - 15rem);
@@ -9,22 +9,23 @@
     border-radius: 5px;
     padding: 1rem;
     background-color: #fff;
-    z-index: 1000;
+    z-index: 3;
     border: none;
 }
-.modal > button {
-    background-color: black;
+.modal > .modal-btn {
+    background-color: green;
     cursor: pointer;
     width: 100%;
-    padding: 24px;
-    color: white;
+    font-size: large;
+    padding: 12px;
+    color: black;
 }
 .overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    z-index: 100;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.75);
 }

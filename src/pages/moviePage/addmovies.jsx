@@ -18,7 +18,7 @@ const RenderMovieForm = () => {
       saveMovie(newMovie, authorizedUser)
       navigate('/movies')
     }
-  }
+  } //TODO: figure out how to navigate the movie list in the app
   
   return (
     <>
