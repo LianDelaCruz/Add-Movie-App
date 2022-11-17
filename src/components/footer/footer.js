@@ -3,9 +3,9 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="footer-cont">
-        <a href="#">LinkedIn</a>
-        <a href="#">Facebook</a>
-        <a href="#">Github</a>
+        <a className="soc-med-link" href="#">LinkedIn</a>
+        <a className="soc-med-link" href="#">Facebook</a>
+        <a className="soc-med-link" href="#">Github</a>
       </footer>
     );
   }

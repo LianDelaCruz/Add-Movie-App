@@ -9,25 +9,33 @@ const UserForm = (props) => {
   const submitUserForm = (e) => {
     e.preventDefault();
 
-    props.onSubmit && props.onSubmit(user)
+    props.onSubmit && props.onSubmit(user);
   };
 
   return (
-    <div>
-      <form onSubmit={submitUserForm}>
-        <input
-          required
-          type="text"
-          placeholder="write your e-mail"
-          onChange={(e) => (user.email = e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="write password"
-          onChange={(e) => (user.password = e.target.value)}
-        />
-        <input type="Submit" onClick={submitUserForm} />
-      </form>
+    <div className="user-cont">
+      <div className="form-cont">
+        <form onSubmit={submitUserForm}>
+          <input
+            className="user-input"
+            required
+            type="text"
+            placeholder="write your e-mail"
+            onChange={(e) => (user.email = e.target.value)}
+          />
+          <input
+            className="user-input"
+            type="password"
+            placeholder="write password"
+            onChange={(e) => (user.password = e.target.value)}
+          />
+          <input
+            className="user-input"
+            type="Submit"
+            onClick={submitUserForm}
+          />
+        </form>
+      </div>
     </div>
   );
 };

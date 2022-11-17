@@ -4,7 +4,7 @@ const Modal = (props) => {
       <div className="overlay"></div>
       {props.show && (
         <div className="modal">
-          <h1>{props.message}</h1>
+          <h1>{props.modalMessage}</h1>
           <button onClick={props.handleClick}>okay!</button>
         </div>
       )}

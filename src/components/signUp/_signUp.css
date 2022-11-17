@@ -1,0 +1,10 @@
+.signup-wrapper {
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1cm;
+    background-color: rgba(0,0,0,.1);
+    box-shadow: 3.8px 7.5px 7.5px hsl(0deg 0% 0% / 0.38);
+    border-radius: 1px;
+}

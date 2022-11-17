@@ -8,19 +8,21 @@ class SignUp extends React.Component {
     super(props);
     this.state = {
       showModal: false,
+      modalMessage: ''
     };
   }
 
   signUpUser = (newUser) => {
     const storedUsers = getUsers();
     const foundUser = storedUsers.find((storedUser) => {
-      const emailsMatch = newUser.email === storedUser.email
-      return emailsMatch
+      const emailsMatch = newUser.email === storedUser.email;
+      return emailsMatch;
     });
     if (!foundUser) {
       saveUser(newUser);
+      this.setState({ showModal: true , modalMessage: 'now you can log in!'});
     } else {
-      this.setState({ showModal: true });
+      this.setState({ showModal: true, modalMessage: 'now you can log in!' });
     }
   }; //this is a function that focus on saving items in the localstorage(helpers folder)
 
@@ -31,11 +33,13 @@ class SignUp extends React.Component {
   render() {
     return (
       <div>
-        sign up
-        <UserForm onSubmit={this.signUpUser} />
+        <div className="signup-wrapper">
+          <h3>Sign Up:</h3>
+          <UserForm onSubmit={this.signUpUser} />
+        </div>
         <Modal
           handleClick={this.hideModal}
-          message={"Account already exist!"}
+          modalMessage={this.state.modalMessage}
           show={this.state.showModal}
         />
       </div>

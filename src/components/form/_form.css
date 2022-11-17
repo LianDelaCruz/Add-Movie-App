@@ -1,0 +1,11 @@
+.form-cont {
+    border: 1px black;
+    padding: 10px
+}
+
+.user-input {
+    text-decoration: none;
+    margin: 5px;
+    font-size: 16px;
+    padding: 1px
+}

@@ -5,10 +5,10 @@ import SignUp from "../../components/signUp/signup";
 
 const Profile = (props) => {
 return (
-    <>
+    <div className="profile-wrapper">
         <LogIn/>
         <SignUp/>
-    </>
+    </div>
 )
 }
 

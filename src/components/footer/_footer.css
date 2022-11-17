@@ -1,18 +1,17 @@
 .footer-cont {
-    height: 70px;
-    background-color: hotpink;
+    height: 6vh;
     width: 100%;
-    padding-top: 10px;
-    bottom: 0;
-    left: 0;
-    text-align: center;
+    background-color: rgba(0,0,0,.2);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     position: absolute;
+    bottom: 0;
 }
 
-a {
+.soc-med-link {
     text-decoration: none;
-    color: blanchedalmond;
-    font-size: 30px;
+    font-size: 20px;
+    margin: 10px;
+    color: black;
 }

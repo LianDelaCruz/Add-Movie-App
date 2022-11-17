@@ -1,11 +1,22 @@
 .header-cont {
-    height: 80px;
+    height: 8vh;
     width: 100%;
-    background-color: mediumturquoise;
-
+    background-color: rgba(0,0,0,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo {
-    width: 180px;
-    height: 70px;
+.header-font{
+    font-size: 20px;
+}
+.header-navlink:visited, .header-navlink:link, .header-navlink:active {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.header-navlink:hover {
+    transform: scale(1.2);
+    /*it doesn't hover when scrolling there*/
 }
