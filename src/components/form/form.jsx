@@ -20,7 +20,7 @@ const UserForm = (props) => {
             className="user-input"
             required
             type="text"
-            placeholder="write your e-mail"
+            placeholder="write your username"
             onChange={(e) => (user.email = e.target.value)}
           />
           <input

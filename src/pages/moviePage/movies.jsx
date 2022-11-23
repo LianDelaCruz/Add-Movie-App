@@ -13,6 +13,7 @@ const Movies = (props) => {
   const goToMoviePage = (movieItem) => {
     navigate(`/movies/` + movieItem.title, { state: { movieItem } });
   };
+
   const handleDeleteClick = (title) => {
     deleteMovie(title)
     setMovies(getMovies())
@@ -23,15 +24,15 @@ const Movies = (props) => {
       <ul className="movie-list-container">
         {movies.map((movieItem) => {
           return (
-            <li key={movieItem.title}>
-              <h1>Title: {movieItem.title}</h1>
-              <img alt="img" src={movieItem.img}></img>
-              <h2>Short Description: {movieItem.shortInfo}</h2>
-              <button onClick={() => goToMoviePage(movieItem)}>
+            <li key={movieItem.title} className="list-cont" >
+              <h2 className="movie-font">{movieItem.title}</h2>
+              <img className="color" alt="img" src={movieItem.img}></img>
+              <h4 className="movie-font">{movieItem.shortInfo}</h4>
+              <button className="movie-button" onClick={() => goToMoviePage(movieItem)}>
                 Read more
               </button>
               {currentUser === movieItem.user && (
-                <button onClick={() => handleDeleteClick(movieItem.title)}>Delete</button>
+                <button className="movie-button" onClick={() => handleDeleteClick(movieItem.title)}>Delete</button>
               )}
             </li>
           );

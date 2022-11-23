@@ -13,10 +13,9 @@
 .header-navlink:visited, .header-navlink:link, .header-navlink:active {
     margin: 10px;
     text-decoration: none;
-    color: black;
+    color: aliceblue;
 }
 
 .header-navlink:hover {
     transform: scale(1.2);
-    /*it doesn't hover when scrolling there*/
 }

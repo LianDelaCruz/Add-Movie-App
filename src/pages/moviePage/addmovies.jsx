@@ -20,9 +20,9 @@ const RenderMovieForm = () => {
   }
   
   return (
-    <>
+    <div className="movie-form-wrapper">
     <MovieForm onSubmit = {addMovie}/>
-    </>
+    </div>
   )
 };
 

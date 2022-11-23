@@ -18,10 +18,11 @@ const App = (props) => {
   return (
     <div>
       {/* <BackgroundVid/> */}
-      <Movies />
+      
       <div className="add-mv-btn-cont">
         <button className="add-mv-btn" onClick={addMovie}>add movie</button>
       </div>
+      <Movies />
     </div>
   );
 };

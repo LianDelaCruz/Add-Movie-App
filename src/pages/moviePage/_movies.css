@@ -1,0 +1,38 @@
+
+img{
+    height: 200px;
+    width: 100%;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+   
+}
+img:hover{
+    filter: grayscale(0%);
+    filter: gray;
+    -webkit-filter: grayscale(0%);
+    filter: none;
+    transition: 1s ease;
+}
+
+.movie-list-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    flex-wrap: wrap
+}
+
+.list-cont {
+    padding: 4px 10px;
+    box-shadow: 6.3px 12.6px 12.6px hsl(0deg 0% 0% / 0.30);
+    background-color: rgba(0,0,0,.4);
+    border-radius: 5px;
+    list-style-type: none;
+    margin: 3px;
+}
+
+.movie-font {
+    padding: 2px;
+}
+
+
+

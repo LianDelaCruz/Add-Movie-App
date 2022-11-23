@@ -59,8 +59,9 @@ export const setLoggedInUser = (userEmail) => {
 
 //Log out function for logged in user
 
-export const logOut = () => {
+/* export const logOut = () => {
   setLoggedInUser(null)
-};
+  window.history.push('/')
+}; */
 
 //Made a seperate file for saving and getting items from local storage so that this can be reused should it need be.

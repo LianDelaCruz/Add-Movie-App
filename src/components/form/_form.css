@@ -1,4 +1,5 @@
 .form-cont {
+    display: flex;
     border: 1px black;
     padding: 10px
 }

@@ -1,5 +1,6 @@
 const MovieForm = (props) => {
-  const defImg = 'https://www.independent.com/wp-content/uploads/2021/11/Popcorn-and-Movie-2.jpg'
+  const defImg =
+    "https://www.independent.com/wp-content/uploads/2021/11/Popcorn-and-Movie-2.jpg";
   const movieInput = {
     title: "",
     img: null || defImg,
@@ -12,15 +13,17 @@ const MovieForm = (props) => {
     props.onSubmit && props.onSubmit(movieInput);
   };
   return (
-    <div className="user-mv-cont">
+    <div>
       <div className="movie-form-cont">
-        <form onSubmit={submitMovie}>
+        <form className="form-wrapper" onSubmit={submitMovie}>
+          <label>Title:</label>
           <input
             className="movie-input"
             type="text"
-            placeholder="Write movie name"
+            placeholder="Write movie title"
             onChange={(e) => (movieInput.title = e.target.value)}
           />
+          <label>Logo:</label>
           <input
             className="movie-input"
             type="file"
@@ -33,19 +36,20 @@ const MovieForm = (props) => {
               console.log(event.target.files[0]);
             }}
           />
+          <label>Summary:</label>
           <input
             className="movie-input"
             type="text"
-            placeholder="Short description"
+            placeholder="Write summary"
             onChange={(e) => (movieInput.shortInfo = e.target.value)}
           />
+          <label>Description:</label>
           <input
             className="movie-input"
             type="text"
-            placeholder="Long description about the movie"
+            placeholder="Write more about the movie"
             onChange={(e) => (movieInput.longInfo = e.target.value)}
           />
-
           <input
             className="movie-input"
             type="submit"

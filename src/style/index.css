@@ -10,4 +10,6 @@
  @import '../components/logIn/_login.css';
  @import '../components/signUp/_signUp.css';
  @import '../components/form/_movieForm.css';
+ @import '../pages/moviePage/_addmovies.css';
+ @import '../pages/moviePage/_movies.css';
  
