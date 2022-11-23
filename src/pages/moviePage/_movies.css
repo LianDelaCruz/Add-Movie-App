@@ -4,6 +4,7 @@
     width: 100%;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
+   
 }
 .color:hover{
     filter: grayscale(0%);
