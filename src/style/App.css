@@ -7,8 +7,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: aliceblue;
   background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
-  height: 100vh;
-  display: grid;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 

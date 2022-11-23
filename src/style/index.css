@@ -12,4 +12,4 @@
  @import '../components/form/_movieForm.css';
  @import '../pages/moviePage/_addmovies.css';
  @import '../pages/moviePage/_movies.css';
- 
+ @import '../pages/moviePage/_movieItem.css';

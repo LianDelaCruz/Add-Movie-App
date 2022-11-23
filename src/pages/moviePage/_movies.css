@@ -1,12 +1,11 @@
 
-img{
+.color{
     height: 200px;
     width: 100%;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
-   
 }
-img:hover{
+.color:hover{
     filter: grayscale(0%);
     filter: gray;
     -webkit-filter: grayscale(0%);
@@ -34,5 +33,29 @@ img:hover{
     padding: 2px;
 }
 
+.wrapper{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+.movie-button{
+    background-color: rgba(0,0,0,.2); 
+    border: none;
+    border-radius: 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
 
-
+.movie-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
