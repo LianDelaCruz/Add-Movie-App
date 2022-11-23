@@ -18,7 +18,6 @@ const LogIn = (props) => {
     if (foundUser) {
       setLoggedInUser(foundUser.email);
       navigate("/");
-      console.log("successfully logged in");
     } else {
       setShowModal(true);
     }

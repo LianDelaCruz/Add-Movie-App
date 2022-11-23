@@ -27,7 +27,6 @@ class SignUp extends React.Component {
   }; //this is a function that focus on saving items in the localstorage(helpers folder)
 
   hideModal = () => {
-    console.log("it works!");
     this.setState({ showModal: false });
   };
   render() {

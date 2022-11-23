@@ -12,6 +12,13 @@ const Header = () => {
         Log in/Sign up
       </NavLink>
       <button onClick={() => logOut()}>Log out</button>
+      {/*Show the log out button only when logged in 
+      
+      {currentUser === movieItem.user && (
+                <button onClick={() => handleDeleteClick(movieItem.title)}>Delete</button>
+              )}
+              
+              const currentUser = getLoggedInUser(authorizedUser);*/}
     </header>
   );
 };
